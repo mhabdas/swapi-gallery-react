@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.user-info {
+  padding: 0 $regular-padding;
+  line-height: $regular-padding;
+
+  &-centered {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+}

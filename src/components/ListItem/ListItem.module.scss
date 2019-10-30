@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+.list-item {
+  border-radius: $border-radius;
+  background: $grey-accent;
+  padding: $regular-padding;
+  margin-bottom: $regular-padding;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

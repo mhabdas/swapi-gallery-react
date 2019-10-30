@@ -1,0 +1,18 @@
+import React, { Component } from "react";
+import DataProvider from "./containers/DataProvider";
+import { ReducerProvider } from "./utils/reducer";
+import MainContainer from "./components/MainContainer/MainContainer";
+
+class App extends Component {
+  render() {
+    return (
+      <ReducerProvider>
+        <MainContainer>
+          <DataProvider />
+        </MainContainer>
+      </ReducerProvider>
+    );
+  }
+}
+
+export default App;

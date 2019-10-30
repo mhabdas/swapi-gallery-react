@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.modal-container {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: $shadow-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  box-sizing: border-box;
+  background-color: $background-color;
+  padding: 0 $bigger-padding;
+  height: 100%;
+  width: 100%;
+  position:relative;
+  @media (min-width: $main-breakpoint) {
+    max-width: 400px;
+    max-height: 700px;
+    border-radius: $border-radius;
+  }
+}
+
+.close-button {
+  font-size: $bigger-font;
+  color: $grey-accent;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

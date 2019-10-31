@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DataProvider from "./containers/DataProvider";
+import DataProvider from "./utils/DataProvider";
 import { ReducerProvider } from "./utils/reducer";
 import MainContainer from "./components/MainContainer/MainContainer";
 

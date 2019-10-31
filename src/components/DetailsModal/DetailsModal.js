@@ -1,23 +1,22 @@
 import React from "react";
 import Modal from "../../components/Modal/Modal";
-import { toggleHeroModal } from "../../utils/actions";
 import Avatar from "../Avatar/Avatar";
 import FlexColumn from "../../components/FlexColumn/FlexColumn";
 import Text from "../Text/Text";
 
-const DetailsModal = ({}) => {
+const DetailsModal = ({ data, ...props }) => {
   return (
-    <Modal
-      visible={!!heroToDisplay}
-      onClose={() => dispatch(toggleHeroModal(state.heroWithOpenModal))}
-    >
-      {heroToDisplay && (
+    <Modal {...props}>
+      {data && (
         <FlexColumn>
-          <Avatar imgSrc={heroToDisplay.avatar_url} className="img-big" />
-          <Text
-            textToDisplay={heroToDisplay.description}
-            className="text-centered"
-          />
+          <Avatar imgSrc={''} className="img-big" />
+          <Text textToDisplay={data.name} className="text-bold" />
+          <Text textToDisplay={`Birth year: ${data.birth_year}`} />
+          <Text textToDisplay={`Height: ${data.height}`} />
+          <Text textToDisplay={`Mass: ${data.mass}`} />
+          <Text textToDisplay={`Hair color: ${data.hair_color}`} />
+          <Text textToDisplay={`Skin color: ${data.skin_color}`} />
+          <Text textToDisplay={`Eye color: ${data.eye_color}`} />
         </FlexColumn>
       )}
     </Modal>

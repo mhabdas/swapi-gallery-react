@@ -1,7 +1,9 @@
-.text-centered {
-  text-align: center;
-}
+@import "../../styles/variables.scss";
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-bigger {
+  font-size: $bigger-font;
 }

@@ -1,5 +1,8 @@
+@import "../../styles/variables";
+
 .img {
   border-radius: 100%;
+  border: 4px solid $accent-color;
 }
 
 .img-small {

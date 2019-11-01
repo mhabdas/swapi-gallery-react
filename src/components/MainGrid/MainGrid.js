@@ -3,6 +3,7 @@ import ListItem from "../ListItem/ListItem";
 import styles from "./MainGrid.module.scss";
 import DetailsModal from "../DetailsModal/DetailsModal";
 import { useModal } from "../../utils/useModal";
+import {avatars} from "../../utils/avatars";
 
 const MainGrid = ({ people }) => {
   const [isModalVisible, toggleModal] = useModal();
@@ -13,8 +14,6 @@ const MainGrid = ({ people }) => {
     toggleModal();
   };
 
-  console.log(personToDisplay);
-
   return (
     <ul className={styles["main-grid"]}>
       {people.map(({ name, created }) => {
@@ -22,7 +21,7 @@ const MainGrid = ({ people }) => {
           <ListItem
             handleClick={() => handleClick(created)}
             key={created}
-            // img={avatar_url}
+            img={avatars[name]}
             name={name}
           />
         );

@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin-right: $small-margin;
+}
+
+.header {
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { catchError, fetchData, initFetching } from "./actions";
-import { PEOPLE_API } from "../../../swapi-gallery-vanillajs/src/js/constants";
+import { PEOPLE_API } from "./constants";
 
 export const fetchDataFromAPI = async (dispatch) => {
     dispatch(initFetching());

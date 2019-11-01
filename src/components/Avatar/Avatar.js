@@ -5,7 +5,9 @@ import styles from './Avatar.module.scss';
 
 const Avatar = ({ imgSrc, className }) => {
   const avatarClass = classNames(styles.img, styles[className]);
-
+  if (!imgSrc) {
+    return <span>Sorry! Avatar is not available</span>
+  }
   return <img className={avatarClass} src={imgSrc} alt="avatar" />;
 };
 

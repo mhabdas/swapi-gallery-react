@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import PropTypes from "prop-types";
-import {CATCH_ERROR, FETCH_DATA, INIT_FETCHING} from "../../../swapi-gallery-vanillajs/src/js/constants";
+import {CATCH_ERROR, FETCH_DATA, INIT_FETCHING} from './constants'
 
 const initialState = {
   data: [],

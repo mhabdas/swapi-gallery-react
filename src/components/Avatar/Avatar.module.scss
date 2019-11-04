@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .img {
+  margin-top: $bigger-margin;
   border-radius: 100%;
   border: 4px solid $accent-color;
 }

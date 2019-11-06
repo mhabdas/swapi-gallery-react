@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './Avatar.module.scss';
+import logo from "../../img/logo.png";
+
 
 const Avatar = ({ imgSrc, className }) => {
   const avatarClass = classNames(styles.img, styles[className]);
   if (!imgSrc) {
-    return <span>Sorry! Avatar is not available</span>
+    return <img className={avatarClass} src={logo} alt="avatar" />
   }
   return <img className={avatarClass} src={imgSrc} alt="avatar" />;
 };

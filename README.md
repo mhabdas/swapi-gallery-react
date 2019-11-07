@@ -2,4 +2,4 @@
 
 Simple gallery with <a href="https://swapi.co/" target=_blank>SWAPI</a> data.
 
-To start the gallery type `yarn install && yarn start`.
+To start the gallery type `npm install && npm start`.

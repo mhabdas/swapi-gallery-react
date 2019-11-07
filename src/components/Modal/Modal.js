@@ -1,26 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {CSSTransition} from 'react-transition-group';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import PropTypes from "prop-types";
+import { CSSTransition } from "react-transition-group";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-import styles from './Modal.module.scss';
-import FlexRow from '../FlexRow/FlexRow';
+import styles from "./Modal.module.scss";
+import FlexRow from "../FlexRow/FlexRow";
 
-const Modal = (props) => {
-  const {
-    children, visible, title, onClose,
-  } = props;
+const Modal = props => {
+  const { children, visible, title, onClose } = props;
   return (
     <CSSTransition in={visible} timeout={300} classNames="modal" unmountOnExit>
-      <div className={styles['modal-container']}>
+      <div className={styles["modal-container"]}>
         <div className={styles.modal}>
           <FlexRow justifyStyle="space-between">
             <h2>{title}</h2>
             <button
               onClick={onClose}
               type="button"
-              className={styles['close-button']}
+              className={styles["close-button"]}
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -38,11 +36,11 @@ Modal.propTypes = {
   children: PropTypes.node,
   visible: PropTypes.bool,
   title: PropTypes.string,
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 Modal.defaultProps = {
-  title: '',
+  title: "",
   children: <></>,
-  visible: false,
+  visible: false
 };

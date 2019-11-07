@@ -1,14 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import styles from './Avatar.module.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import styles from "./Avatar.module.scss";
 import logo from "../../img/logo.png";
-
 
 const Avatar = ({ imgSrc, className }) => {
   const avatarClass = classNames(styles.img, styles[className]);
   if (!imgSrc) {
-    return <img className={avatarClass} src={logo} alt="avatar" />
+    return <img className={avatarClass} src={logo} alt="avatar" />;
   }
   return <img className={avatarClass} src={imgSrc} alt="avatar" />;
 };
@@ -17,9 +16,9 @@ export default Avatar;
 
 Avatar.propTypes = {
   imgSrc: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 Avatar.defaultProps = {
-  className: 'img-small',
+  className: "img-small"
 };

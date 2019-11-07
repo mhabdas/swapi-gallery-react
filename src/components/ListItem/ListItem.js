@@ -8,7 +8,7 @@ import Text from "../Text/Text";
 const ListItem = ({ img, name, handleClick }) => (
   <li className={styles["list-item"]} onClick={handleClick}>
     <Avatar imgSrc={img} />
-    <Text textToDisplay={name} className='text-bigger' />
+    <Text textToDisplay={name} className="text-bigger" />
   </li>
 );
 

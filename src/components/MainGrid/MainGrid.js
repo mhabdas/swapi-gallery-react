@@ -3,13 +3,13 @@ import ListItem from "../ListItem/ListItem";
 import styles from "./MainGrid.module.scss";
 import DetailsModal from "../DetailsModal/DetailsModal";
 import { useModal } from "../../utils/useModal";
-import {avatars} from "../../utils/avatars";
+import { avatars } from "../../utils/avatars";
 
 const MainGrid = ({ people }) => {
   const [isModalVisible, toggleModal] = useModal();
   const [personToDisplay, setPersonToDisplay] = useState(null);
   const handleClick = id => {
-    const person = people.find(el => (el.created === id));
+    const person = people.find(el => el.created === id);
     setPersonToDisplay(person);
     toggleModal();
   };
@@ -27,11 +27,13 @@ const MainGrid = ({ people }) => {
         );
       })}
       )
-      {isModalVisible && <DetailsModal
-        visible={isModalVisible}
-        onClose={toggleModal}
-        data={personToDisplay}
-      />}
+      {isModalVisible && (
+        <DetailsModal
+          visible={isModalVisible}
+          onClose={toggleModal}
+          data={personToDisplay}
+        />
+      )}
     </ul>
   );
 };

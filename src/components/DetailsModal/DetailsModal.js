@@ -3,7 +3,7 @@ import Modal from "../../components/Modal/Modal";
 import Avatar from "../Avatar/Avatar";
 import FlexColumn from "../../components/FlexColumn/FlexColumn";
 import Text from "../Text/Text";
-import {avatars} from "../../utils/avatars";
+import { avatars } from "../../utils/avatars";
 
 const DetailsModal = ({ data, ...props }) => {
   return (

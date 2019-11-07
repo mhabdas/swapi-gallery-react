@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import styles from './FlexColumn.module.scss';
+import styles from "./FlexColumn.module.scss";
 
 const FlexColumn = ({ children }) => (
-  <div className={styles['flex-column']}>{children}</div>
+  <div className={styles["flex-column"]}>{children}</div>
 );
 
 export default FlexColumn;
 
 FlexColumn.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };

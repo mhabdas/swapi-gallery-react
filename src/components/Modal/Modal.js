@@ -9,13 +9,14 @@ import FlexRow from '../FlexRow/FlexRow';
 
 const Modal = (props) => {
   const {
-    children, visible, onClose,
+    children, visible, title, onClose,
   } = props;
   return (
     <CSSTransition in={visible} timeout={300} classNames="modal" unmountOnExit>
       <div className={styles['modal-container']}>
         <div className={styles.modal}>
           <FlexRow justifyStyle="space-between">
+            <h2>{title}</h2>
             <button
               onClick={onClose}
               type="button"
@@ -36,10 +37,12 @@ export default Modal;
 Modal.propTypes = {
   children: PropTypes.node,
   visible: PropTypes.bool,
+  title: PropTypes.string,
   onClose: PropTypes.func.isRequired,
 };
 
 Modal.defaultProps = {
+  title: '',
   children: <></>,
   visible: false,
 };
